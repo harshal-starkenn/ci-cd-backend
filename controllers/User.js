@@ -1,5 +1,6 @@
 const { userModel } = require("../model/User.model");
 
+//this is the api used for getting the total users
 const User = async (req, res) => {
   const { first_name, last_name, email, password } = req.body;
 
@@ -19,7 +20,7 @@ const User = async (req, res) => {
     res.status(500).send("Error in adding the user");
   }
 };
-
+//this is the api for adding the new user
 const getUser = async (req, res) => {
   try {
     const getUser = await userModel.find();
