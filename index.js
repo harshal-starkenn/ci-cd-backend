@@ -6,6 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 db();
+//this is the router
 app.use("/api/user", userRouter);
 
 app.listen(9001, () => {
